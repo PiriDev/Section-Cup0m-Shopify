@@ -1,0 +1,235 @@
+{{ 'cupons.css' | asset_url | stylesheet_tag }}
+
+
+<!--_____________________________________________________________________-->
+<!--|                            Banner/Div                             |-->
+<!--|___________________________________________________________________|-->
+
+<div class="cupom-section">
+  <div class="cupom-section-interno">
+    <div class="prim-linha-cupom">
+      <div class="texto-prim-linha">
+        <h1> {{section.settings.tituloCupom}} </h1>
+        <p> {{section.settings.textoCupom}} </p>
+        <button type="submit"> {{section.settings.botaoCupom}} </button>
+      </div>
+      <div><img src="https://lh3.googleusercontent.com/QalJCxIHXM__gDbTist2TMEdlkMdGqLqtqnD4Cc8d3pr83J2aoGJz6lgxqMRmEWsLruAGzixZYOHaa0_0s8Q236cLw4pQuJmk8K3--q2Mtu62VFPp1oJO-_AkD9aUlOdVCP3MMHnnfJbo35PPJ4x6yPA_6NCp9PToDECdY1z02c3c7edybzt0778si8ZGDLmiijCUrt8WwVeadnSIa64gPPi9MPHE5Jd8RyR2HKKmge4UQbb9ygoDi9iewndJqU6EUOXJDBV6lCoY5FjbBJkZS4WBaKwjZt-7ZLdENLnFFkEbPeLsg8kgKWVUjP5sFSfMFXHfhPPkbN_bhaCm0x5pVHYZqr3SONjiftoWW_oVUXhhtrzkUyz51V6PWsanYaDrRk7YFMlBM61CO2H5LiyUpED2s-RLiBAxBWFIMbnKOSsJhkMl-EWnY01kKfHq5vQRXXtBwCn-APsmrv7zW-NC0O6XglE9Y08kK_WN94urEgdiNl-dUBNroCXtEMPEymfxJCPKMuJve7EdW6ybBS0607662AlHx1oKtOH83yQinX5Lg1xJ1Lx1lTXmzlOKt-XgXCOnfqpmAMSAjddgiL-qMYroqzq7T7nusaaUwq258ICS6XWkc2ORr9N-OEiFXpXYwEfoGjelwlU-XcNSJCanN_MESq5URHKnPsD8sAJLM6vzKMku6BWX2Wjmlr_3yAbuYRHuOM3F9nQchB5g-AK6O4v6KgN5EECMvIbPmYHJbnb5OQJvY8ISh2gHmg=s512-no?authuser=0"></div>
+    </div> <!--prim-linha-cupom-->
+    
+<!--_____________________________________________________________________-->
+<!--|                           Cards/Cupons                            |-->
+<!--|___________________________________________________________________|-->    
+    
+    <div class="segu-linha-cupom">
+      
+      {% for block in section.blocks %}
+		{% assign item = block.settings %}
+      
+        <div class="cards-cupom">
+          <p for="{{forloop.index}}"> {{section.settings.inicioCupom}} </p>
+          <h1 for="{{forloop.index}}"> {{section.settings.porcentagemCupom}} </h1>
+          <p class="texto-bottom-cupom" for="{{forloop.index}}"> {{section.settings.tipoDeDescontoCupom}} </p>
+          <p class="validade-cupom" for="{{forloop.index}}"> {{section.settings.validadeCupom}} </p>
+          <h2 class="codigo-cupom" for="{{forloop.index}}"> {{section.settings.codigoCupom}} </h2>
+        </div> <!--cards-cupom-->
+      
+      {% endfor %}
+      
+   
+
+    </div> <!--segu-linha-cupom-->
+    
+  </div> <!--cupom-section-interno-->
+</div> <!--cupom-section-->
+
+
+<!--_________________________________________________-->
+<!--|                      JSON                     |-->
+<!--_________________________________________________-->
+
+{% schema %}
+ {
+
+    "name": "Cupom",
+    "settings": [
+	  
+      {
+        "id": "tituloCupom",
+        "type": "text",
+        "label": "Título Banner Cupom",
+        "default": "Ofertas do mês com edição limitada!"
+      },
+
+      {
+        "id": "textoCupom",
+        "type": "text",
+        "label": "Texto sobre o Cupom",
+        "default": "Semanas de ofertas em todos os produtos! Adicionando os cupons abaixo você pode ganhar até 20% de desconto"
+      },
+
+	  {
+        "id": "botaoCupom",
+        "type": "text",
+        "label": "Botão",
+        "default": "Ir para o catálogo!"
+      },
+
+
+
+	  {
+        "id": "inicioCupom",
+        "type": "text",
+        "label": "Topo do Cupom",
+        "default": "Cupom de"
+      },
+      {
+        "id": "porcentagemCupom",
+        "type": "text",
+        "label": "Porcentagem do Cupom",
+        "default": "5%"
+      },
+      {
+        "id": "tipoDeDescontoCupom",
+        "type": "text",
+        "label": "Tipo de Desconto",
+        "default": "de desconto para compras apenas no cartão de crédito"
+      },
+      {
+        "id": "validadeCupom",
+        "type": "text",
+        "label": "Validade",
+        "default": "Validade de 5 dias"
+      },
+      {
+        "id": "codigoCupom",
+        "type": "text",
+        "label": "Código",
+        "default": "USE: CUPOM5"
+      }
+    ],
+
+   "name": "Cupons",
+   "tag": "section",
+   "class": "spaced-section",
+   "max_blocks": 4,
+   "blocks": 
+	[
+	 {
+	
+        "name": "CardCupom",
+        "type": "group",
+        "settings": 
+			[
+              {
+                "id": "inicioCupom",
+                "type": "text",
+                "label": "Topo do Cupom",
+                "default": "Cupom de"
+              },
+              {
+                "id": "porcentagemCupom",
+                "type": "text",
+                "label": "Porcentagem do Cupom",
+                "default": "5%"
+              },
+              {
+                "id": "tipoDeDescontoCupom",
+                "type": "text",
+                "label": "Tipo de Desconto",
+                "default": "de desconto para compras apenas no cartão de crédito"
+              },
+              {
+                "id": "validadeCupom",
+                "type": "text",
+                "label": "Validade",
+                "default": "Validade de 5 dias"
+              },
+              {
+                "id": "codigoCupom",
+                "type": "text",
+                "label": "Código",
+                "default": "USE: CUPOM5"
+              }
+          	]
+	 }
+	],
+    "presets": [
+      {
+        "name": "cupons-desafio",
+        "category": "Custom"
+      }
+    ]
+ }
+{% endschema %}
+
+<!-- 
+
+<div class="cards-cupom">
+          <p> {{section.settings.inicioCupom}} </p>
+          <h1> {{section.settings.porcentagemCupom}} </h1>
+          <p class="texto-bottom-cupom"> {{section.settings.tipoDeDescontoCupom}} </p>
+          <p class="validade-cupom"> {{section.settings.validadeCupom}} </p>
+          <h2 class="codigo-cupom"> {{section.settings.codigoCupom}} </h2>
+        </div> 
+
+
+
+
+
+<div class="cards-cupom">
+          <p></p>
+          <h1></h1>
+          <p class="texto-bottom-cupom">de desconto para compras no cartão de crédito</p>
+          <p class="validade-cupom">Validade de 2 dias</p>
+          <h2 class="codigo-cupom">USE: CUPOM10</h2>
+        </div>
+      
+        <div class="cards-cupom">
+          <p></p>
+          <h1></h1>
+          <p class="texto-bottom-cupom">de desconto para compras à Vista/PIX</p>
+          <p class="validade-cupom">Validade de 5 dias</p>
+          <h2 class="codigo-cupom">USE: CUPOM15</h2>
+        </div>
+      
+        <div class="cards-cupom">
+          <p></p>
+          <h1></h1>
+          <p class="texto-bottom-cupom">de desconto para compras à Vista/PIX</p>
+          <p class="validade-cupom">Validade de 2 dias</p>
+          <h2 class="codigo-cupom">USE: CUPOM20</h2>
+        </div>
+
+
+{
+        "id": "inicioCupom",
+        "type": "text",
+        "label": "Topo do Cupom",
+        "default": "Cupom de"
+      },
+	  {
+        "id": "porcentagemCupom5",
+        "type": "text",
+        "label": "Porcentagem 1º Cupom",
+        "default": "5%"
+      },
+	  {
+        "id": "porcentagemCupom10",
+        "type": "text",
+        "label": "Porcentagem 2º Cupom",
+        "default": "10%"
+      },
+	  {
+        "id": "porcentagemCupom15",
+        "type": "text",
+        "label": "Porcentagem 3º Cupom",
+        "default": "15%"
+      },
+
+	  {
+        "id": "porcentagemCupom20",
+        "type": "text",
+        "label": "Porcentagem 4º Cupom",
+        "default": "20%"
+      }
+-->
