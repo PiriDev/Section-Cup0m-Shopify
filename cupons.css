@@ -1,0 +1,86 @@
+.cupom-section h2{font-family: 'Verdana', sans-serif;}
+
+/*________________________________________________________________*/
+/*|                         Banner/Div                           |*/
+/*|______________________________________________________________|*/
+
+.cupom-section
+{
+	background-image: url(https://wallpapercave.com/wp/wp1895641.jpg);
+	background-position: bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+	object-fit: scale-down;
+	height: 510px;
+}
+.cupom-section-interno
+{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/*________________________________________________________________*/
+/*|                        Texto/Imagem                          |*/
+/*|______________________________________________________________|*/
+
+.prim-linha-cupom 
+{
+	display: flex;
+	flex-direction: row;
+}
+.prim-linha-cupom h1 {text-transform: uppercase; font-size: 30px;}
+.prim-linha-cupom img
+{
+  	width: 220px;
+  	margin: 0 100px 0 0;
+}
+.texto-prim-linha
+{
+	margin: 10px 100px;
+  	padding: 0 
+}
+.texto-prim-linha p {padding: 0 30px 0 0;}
+
+/*________________________________________________________________*/
+/*|                        Cards/Cupons                          |*/
+/*|______________________________________________________________|*/
+
+.segu-linha-cupom
+{
+	display: flex;
+	flex-direction: row;
+  	align-items: center;
+}
+.cards-cupom
+{
+  	text-decoration: bold;
+  	border-radius: 15px 0;
+  	background-color: rgba(242 , 242 , 242 , 0.8);
+  	text-align: center;
+	line-height: 20px;
+  	margin: 0 auto;
+	max-width: 200px;
+  	border: solid 2px #F266C1;
+}
+.cards-cupom h1 
+{
+  	color: #F266C1F; 
+  	font-size: 30px;
+  	margin: 10px 0;
+}
+.texto-bottom-cupom , .validade-cupom 
+{
+  	font-size: 12px; 
+  	margin:0;
+}
+.validade-cupom 
+{
+  	border-bottom: dashed 4px #000;
+  	padding: 0 0 10px 0;
+}
+.codigo-cupom 
+{
+  padding: 10px 0; 
+  font-size: 20px; 
+  color: #000;
+}
