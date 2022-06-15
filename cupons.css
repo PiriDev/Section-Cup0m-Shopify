@@ -9,7 +9,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	object-fit: scale-down;
-	height: 550px;
+	height: 600px;
 }
 .cupom-section-interno
 {
@@ -56,7 +56,7 @@
   	border: solid 2px #F266C1;
   	border-radius: 15px 0;
   	text-transform: uppercase;
-    margin: 0 0 10px 0;
+    margin: 0 0 23px 0;
   	font-size: 17px;
   	color: #000;
   	font-family: 'Oswald', sans-serif;
