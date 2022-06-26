@@ -43,16 +43,16 @@
 	margin: 10px 100px;
   	padding: 0;
 }
-.texto-prim-linha p 
+.conteudo-texto-prim-linha 
 {
   	padding: 0 10px 0 0; 
-  	font-size: 23px;
+  	font-size: 18px;
 }
 .texto-prim-linha a
 {
 	text-decoration: none;
   	background-color: rgba(242 , 242 , 242 , 0.8);
-  	padding: 5px;
+  	padding: 8px;
   	border: solid 2px #F266C1;
   	border-radius: 15px 0;
   	text-transform: uppercase;
@@ -67,7 +67,7 @@
   	border-radius: 0;
     transition: 0.8s;
   	transform: scale(1.1);
-  	padding: 7px;
+  	padding: 10px;
   	font-size: 19px;
 }
 
@@ -77,6 +77,7 @@
 
 .segu-linha-cupom
 {
+  	margin: 20px 0 0 0;
 	display: flex;
 	flex-direction: row;
   	align-items: center;
