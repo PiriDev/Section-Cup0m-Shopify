@@ -1,5 +1,7 @@
 <h1 align="center">🔖 Seção no Shopify 🔖</h1>
 
+<h1 align="center"> <img src="https://img.shields.io/badge/Status-Concluído_✅-%2346db6e?style=for-the-badge&logo=gear)"> </h1>
+
 <h2>➛ Este programa utiliza as seguintes tecnologias:</h2>
 
 ![Badge](https://img.shields.io/badge/Linguagem_Principal-Liquid_/_JSON-%237159c1?style=for-the-badge&logo=ghost)
@@ -24,7 +26,7 @@
   - [ ] PRONTO!
 
 <hr>
-<img align="center" height="480em" src="https://github.com/PiriDev/Section-Cup0m-Shopify/blob/PiriProjects/cupom.png">
+<h1 align="center"> <img align="center" height="480em" src="https://github.com/PiriDev/Section-Cup0m-Shopify/blob/PiriProjects/cupom.png"> </h1>
 <hr>
 <p align="center">Acesse meu site e entre em contato comigo!</p>
 <p align="center">http://devvini.com/</p>
